@@ -51,10 +51,6 @@
             allowUnfree = true;
             allowUnsupportedSystem = false;
             allowInsecure = true;
-
-            permittedInsecurePackages = [
-              "python3.10-django-3.1.14"
-            ];
           };
 
           overlays = [
@@ -78,6 +74,19 @@
             sharedDarwinConfiguration
             ./machines/discovery
             ./users/jwnx
+          ];
+        };
+
+        solvang = inputs.darwin.lib.darwinSystem {
+          system = "x86_64-darwin";
+          inherit inputs;
+
+          modules = [
+            inputs.homemanager.darwinModules.home-manager
+            inputs.agenix.nixosModules.age
+            sharedDarwinConfiguration
+            ./machines/solvang
+            ./users/arbusto
           ];
         };
     };
