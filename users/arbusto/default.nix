@@ -1,8 +1,8 @@
 { pkgs, inputs, system, lib, ... }:
 
 let
-  username = "jwnx";
-  fullname = "jwnx";
+  username = "arbusto";
+  fullname = "arbusto";
 
 in
 

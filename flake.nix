@@ -92,5 +92,6 @@
     };
 
     discovery = self.darwinConfigurations.discovery.system;
+    solvang = self.darwinConfigurations.solvang.system;
   };
 }
